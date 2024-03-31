@@ -1,11 +1,13 @@
 "use client";
 
 import Book from "@/components/book";
+import useMaxScroll from "@/hooks/useMaxScroll";
 import useScroll from "@/hooks/useScroll";
 import IBooksResponse from "@/models/responses/books-response";
 import { LIST_PATH } from "@/services/api";
 import { getJson } from "@/services/service";
 import styles from "@/styles/pages/books.module.css";
+import { useState } from "react";
 import useSWR from "swr";
 
 export default function Books({ params: { id } }) {
@@ -15,8 +17,8 @@ export default function Books({ params: { id } }) {
   );
   const ratio = useScroll();
 
-  if (error) return <div className={styles.test}>Failed to load</div>;
-  if (isLoading) return <div className={styles.test}>Loading...</div>;
+  if (error) return <div className={styles.error}>Failed to load</div>;
+  if (isLoading) return <div className={styles.loading}>Loading</div>;
 
   return (
     <div className={styles.scrollArea}>
@@ -25,7 +27,7 @@ export default function Books({ params: { id } }) {
           className={styles.wrapper}
           style={{
             transform: `rotateY(-10deg) rotateX(25deg) rotateZ(25deg) translateX(${
-              ratio * -15 + 280
+              ratio * -150 + 280
             }rem)`,
           }}
         >
@@ -34,6 +36,7 @@ export default function Books({ params: { id } }) {
               return (
                 <Book
                   key={index}
+                  index={index}
                   rank={book.rank}
                   title={book.title}
                   author={book.author}

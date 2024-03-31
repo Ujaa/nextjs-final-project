@@ -24,9 +24,15 @@
   width: 100vw;
   height: 100vh;
   transform-style: preserve-3d;
+  transition: 0.2s;
 }
 
-.test {
-  padding-top: 10rem;
-  font-size: 10rem;
+.loading {
+  width: 100vw;
+  height: 100vh;
+  font-size: 4rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

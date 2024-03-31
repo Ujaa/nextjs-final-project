@@ -28,3 +28,13 @@
   gap: 20rem;
   transform-style: preserve-3d;
 }
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  font-size: 4rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

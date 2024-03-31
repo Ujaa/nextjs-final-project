@@ -19,7 +19,7 @@ export default function BestSeller({
     <section
       key={index}
       className={styles.wall}
-      style={{ transform: `translateZ(-${index * 200}vw)` }}
+      style={{ transform: `translateZ(-${index * 200}vh)` }}
     >
       <Link href={`/lists/${id}`}>
         <div className={styles.wallContent}>
@@ -27,8 +27,8 @@ export default function BestSeller({
             className={styles.wallTitle}
             style={{
               position: "absolute",
-              top: random ? random.y * 3 + "vh" : 0,
-              left: random ? random.x * 3 + "vw" : 0,
+              top: random ? random.y * 2 + "vh" : 0,
+              left: random ? random.x * 2 + "vw" : 0,
             }}
           >
             {text}
