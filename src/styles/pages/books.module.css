@@ -1,0 +1,26 @@
+.world {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  perspective: 2000px;
+  background-color: var(--green);
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: 1.2s;
+  transform: rotateY(-10deg) rotateX(25deg) rotateZ(25deg) translateX(200rem);
+}
+
+.books {
+  display: flex;
+  gap: 20rem;
+  transform-style: preserve-3d;
+}

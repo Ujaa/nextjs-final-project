@@ -1,0 +1,31 @@
+.header {
+  position: fixed;
+  width: 100vw;
+  padding: 2.4rem 2.4rem;
+  background-color: var(--blue);
+  border-bottom: 1px white solid;
+  z-index: 1;
+}
+
+.wrapper {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.6rem;
+}
+
+.navigationItem a {
+  color: white;
+}

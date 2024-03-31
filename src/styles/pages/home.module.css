@@ -1,0 +1,32 @@
+.scrollArea {
+  height: 500vh;
+}
+
+.world {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  perspective: 2000px;
+}
+
+.stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.list {
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.test {
+  padding-top: 10rem;
+  font-size: 10rem;
+}

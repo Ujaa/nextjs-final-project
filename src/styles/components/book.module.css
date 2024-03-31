@@ -1,0 +1,97 @@
+.wrapper {
+  transform-style: preserve-3d;
+}
+
+.bookWrapper {
+  position: relative;
+  width: 20rem;
+  height: 32rem;
+  background-color: var(--blue);
+  transform-style: preserve-3d;
+}
+
+.bookCover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: center left 4rem;
+  transform: translateZ(4rem);
+  transform-style: preserve-3d;
+  transition: 1.2s;
+}
+
+.bookCoverImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateZ(1px);
+}
+
+.bookCoverInside {
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.author {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--yellow);
+}
+
+.title {
+  font-size: 2.4rem;
+  color: var(--yellow);
+}
+
+.bookPage {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  width: 19.5rem;
+  height: 30.5rem;
+  background-color: var(--yellow);
+  transform: translateZ(4rem);
+  padding: 2rem;
+}
+
+.bookSpine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 4rem;
+  height: 32rem;
+  background-color: var(--blue);
+  transform-origin: center left;
+  transform: rotateY(-90deg);
+}
+
+.bookRightSide {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  width: 4rem;
+  height: 30.5rem;
+  background-color: #f4f745;
+  transform-origin: center right;
+  transform: rotateY(90deg);
+}
+
+.bookBottomSide {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  width: 19.5rem;
+  height: 4rem;
+  background-color: #dde02a;
+  transform-origin: center bottom;
+  transform: rotateX(-90deg);
+  z-index: 10;
+}
