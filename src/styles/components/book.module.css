@@ -1,5 +1,7 @@
 .wrapper {
   transform-style: preserve-3d;
+  transform: translateZ(200rem);
+  animation: dropToBottom 1.2s cubic-bezier(1, 0.15, 0.6, 1.26) forwards;
 }
 
 .bookWrapper {
@@ -94,4 +96,13 @@
   transform-origin: center bottom;
   transform: rotateX(-90deg);
   z-index: 10;
+}
+
+@keyframes dropToBottom {
+  from {
+    transform: translateZ(200rem);
+  }
+  to {
+    transform: translateZ(0rem);
+  }
 }

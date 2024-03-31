@@ -6,6 +6,7 @@ import { useState } from "react";
 import BuyLinks from "./buy-links";
 
 interface BookProps {
+  index: number;
   rank: number;
   title: string;
   author: string;
@@ -14,6 +15,7 @@ interface BookProps {
 }
 
 export default function Book({
+  index,
   rank,
   title,
   author,
@@ -35,6 +37,7 @@ export default function Book({
       className={styles.wrapper}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      style={{ animationDelay: `${index * 0.2}s` }}
     >
       <div className={styles.bookWrapper}>
         <div className={styles.bookPage}>
