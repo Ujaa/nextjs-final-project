@@ -27,7 +27,7 @@ export default function Books({ params: { id } }) {
           className={styles.wrapper}
           style={{
             transform: `rotateY(-10deg) rotateX(25deg) rotateZ(25deg) translateX(${
-              ratio * -15 + 280
+              (data.num_results > 11 ? 280 : 180) + ratio * -15
             }rem)`,
           }}
         >
