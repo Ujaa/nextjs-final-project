@@ -1,3 +1,7 @@
+.scrollArea {
+  height: 500vh;
+}
+
 .world {
   position: fixed;
   left: 0;
@@ -15,8 +19,8 @@
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
-  transition: 1.2s;
-  transform: rotateY(-10deg) rotateX(25deg) rotateZ(25deg) translateX(200rem);
+  transition: 0.4s;
+  transform: rotateY(-10deg) rotateX(25deg) rotateZ(25deg);
 }
 
 .books {

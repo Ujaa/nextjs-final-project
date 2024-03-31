@@ -2,7 +2,7 @@
 
 import useSWR from "swr";
 import styles from "@/styles/pages/home.module.css";
-import { getBestSellers } from "@/services/service";
+import { getJson } from "@/services/service";
 import IBestSellerResponse from "@/models/responses/best-seller-response";
 import BestSeller from "@/components/best-seller";
 import useScroll from "@/hooks/useScroll";
@@ -15,7 +15,7 @@ import useMouseMove from "@/hooks/useMouseMove";
 export default function Home() {
   const { data, error, isLoading } = useSWR<IBestSellerResponse>(
     LISTS_PATH,
-    getBestSellers
+    getJson
   );
   const ratio = useScroll();
   const [_, setMaxScroll] = useMaxScroll();

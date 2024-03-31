@@ -10,6 +10,7 @@ const useScroll = () => {
   const [maxScroll] = useMaxScroll();
 
   const handleScroll = () => {
+    console.log("[test] scrollRatio:", window.scrollY / maxScroll);
     setScrollRatio(window.scrollY / maxScroll);
   };
 
